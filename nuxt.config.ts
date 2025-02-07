@@ -9,12 +9,12 @@ export default defineNuxtConfig({
       {
         code: 'th',
         name: 'ไทย',
-        // file: 'th.json'
+        // file: 'th.ts'
       },
       {
         code: 'en',
         name: 'English',
-        // file: 'en.json'
+        // file: 'en.ts'
       }
     ],
     defaultLocale: 'th',

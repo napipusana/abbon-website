@@ -9,6 +9,10 @@
     const errorMessage = ref('')
     const isOpen = ref(false)
 
+    useHead({
+      title: computed(() => t('contacts'))
+    })
+
     const validateForm = () => {
         errors.value = {}
 

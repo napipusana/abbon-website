@@ -2,21 +2,26 @@
     // const profileImage = ref(null)
     const profileInput = ref(null)
     const profileImage = useState('image')
+    const {t} = useI18n()
 
     const openProfileUpload = () => {
         profileInput.value?.click()
     }
 
     const handleProfileUpload = (event) => {
-    const file = event.target.files[0]
-    if (file) {
-        const reader = new FileReader()
-        reader.onload = (e) => {
-        profileImage.value = e.target.result
-        }
-        reader.readAsDataURL(file)
+      const file = event.target.files[0]
+      if (file) {
+          const reader = new FileReader()
+          reader.onload = (e) => {
+            profileImage.value = e.target.result
+          }
+          reader.readAsDataURL(file)
+      }
     }
-    }
+
+    useHead({
+      title: computed(() => t('home'))
+    })
 </script>
 
 <template>

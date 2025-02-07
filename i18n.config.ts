@@ -1,6 +1,8 @@
 export default defineI18nConfig(() => ({
     legacy: false,
-    locale: 'en',
+    locale: 'th', // เปลี่ยนเป็นภาษาเริ่มต้นที่ต้องการ
+    fallbackLocale: 'en', // ภาษาสำรองถ้าไม่พบคำแปล
+    strategy: 'prefix_except_default',
     messages: {
       en: {
         welcome: 'Welcome',

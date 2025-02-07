@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 import Footer from '@/components/Footer.vue'
-// import LocaleLang from '@/components/LocaleLang.vue'
+import LocaleLang from '@/components/LocaleLang.vue'
 
 const isSidebarOpen = ref(false)
 const contactMenuOpen = ref(false)
@@ -9,10 +9,10 @@ const contactMenuOpen = ref(false)
 const profileInput = ref(null)
 const route = useRoute()
 
-const langOptions = ref([
-    {id: 'en', name: 'English'},
-    {id: 'th', name: 'ไทย'},
-])
+// const langOptions = ref([
+//     {id: 'en', name: 'English'},
+//     {id: 'th', name: 'ไทย'},
+// ])
 
 const profileImage = useState('image', () => '')
 
@@ -108,15 +108,15 @@ watch(() => route.path, () => {
 
             <!-- Full Name -->
             <span class="text-gray-700 hidden lg:block">{{ $t('pipusana_kumvongdee') }}</span>
-
+<!-- 
             <USelectMenu
                 v-model="$i18n.locale"
                 :options="langOptions"
                 value-attribute="id"
                 option-attribute="name"
-            />
+            /> -->
 
-            <!-- <LocaleLang /> -->
+            <LocaleLang />
           </div>
         </div>
       </div>

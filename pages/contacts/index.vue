@@ -5,6 +5,10 @@
     const contacts = ref([])
     const {t} = useI18n()
 
+    useHead({
+      title: computed(() => t('contacts'))
+    })
+
     onMounted(() => {
         contacts.value = Array.from({ length: 100 }, (_, i) => ({
             id: i + 1,

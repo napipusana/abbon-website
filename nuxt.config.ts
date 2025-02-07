@@ -5,6 +5,19 @@ export default defineNuxtConfig({
   modules: ['@nuxt/ui', '@nuxtjs/i18n'],
   i18n: {
     vueI18n: './i18n.config.ts', // if you are using custom path, default
+    locales: [
+      {
+        code: 'th',
+        name: 'ไทย',
+        // file: 'th.json'
+      },
+      {
+        code: 'en',
+        name: 'English',
+        // file: 'en.json'
+      }
+    ],
+    defaultLocale: 'th',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_lang',
